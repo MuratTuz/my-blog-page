@@ -1,9 +1,10 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   header {
-    margin: auto;
-    
+    margin: auto;  
+    height: auto;
+    box-sizing: content-box;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
   }
    header section {
@@ -37,8 +38,8 @@
     height: 9px;
     margin: 0;
   }
-  header section div h1 {
+  /*header section div h1 {
 border: 1px solid red;
-}
+}*/
   
 }/* @media screen*/
