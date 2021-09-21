@@ -1,16 +1,16 @@
-html,
-body {
+html, body, main {
   height: 100%;
   font-family: "Courier New", Courier, monospace;
   font-size: 1em;
 }
+
+
+
 a {
   text-decoration: none;
   cursor: pointer;
 }
-h1 {
-  /*font: 68px "monospace";*/
-  font-family: "Courier New", Courier, monospace;
+header section div h1 {
   font-size: 68px;
   font-weight: 600;
 }
@@ -31,8 +31,8 @@ img.logo-github {
   /* The image used */
   background-image: url("../images/it_background.jpeg");
 
-  /* Full height */
-  height: 100%;
+  /* height */
+  height: 70%;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -40,12 +40,14 @@ img.logo-github {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/*
 .content {
   height: 400px;
   color: whitesmoke;
   background-color: #284f75;
 }
-
+*/
 section #name,
 section #info {
   color: turquoise;
@@ -55,9 +57,7 @@ section #info {
   flex-direction: column;
   justify-content: center;
 }
-main {
-  height: 100%;
-}
+
 #info div a {
   color: rgb(91, 190, 181);
   /*color: #acbcc9;*/
@@ -79,12 +79,10 @@ main {
   outline: solid #f00 1px !important;
 }
 */
-/*header divsection:after,*/
-header nav ul:after,
-#content div:after,
-#content div ul.services:after,
+/*header divsection:after,
+header nav ul:after,*/
 footer:after,
-footer div.section nav ul:after {
+footer nav ul:after {
   clear: both;
   content: " ";
   display: block;
@@ -93,13 +91,9 @@ footer div.section nav ul:after {
   visibility: hidden;
 }
 
-header div#navigation {
+/*header div#navigation {
   margin: 0;
-}
-header nav {
-  width: 100%;
-  background: #274f75 url(../images/bg-menu.gif) repeat-x;
-}
+}*/
 
 header {
   background-color: #284f75;
@@ -107,24 +101,30 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* Stay fixed on top*/
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+header nav {
+  margin: 0 auto;
+  width: 100%;
+  background: #274f75 url(../images/bg-menu.gif) repeat-x;
 }
 
 header section {
   height: 145px;
-  margin: 0 auto;
-  padding: 0;
-  width: 960px;
+  margin: 0 200px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 header nav ul {
   list-style: none;
-  margin: 2px auto 0;
-  padding: 0;
-  width: 935px;
+  margin: 0 200px;
+
 }
 header nav ul li {
   float: left;
@@ -134,13 +134,13 @@ header nav ul li a {
   color: black;
   display: block;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 550;
   height: 43px;
   line-height: 37px;
   padding: 0 23px;
   text-align: center;
   text-decoration: none;
-  text-shadow: 1px 1px 0 #94c81d;
+  text-shadow: 1px 1px 0 turquoise;
   text-transform: capitalize;
 }
 header nav ul li.current,
@@ -149,77 +149,77 @@ header nav ul li:hover {
   background-color: #c80808;
   color: white;
 }
-header nav ul li.current a {
-  color: white;
-}
+header nav ul li.current a,
 header nav ul li a:hover {
   color: white;
 }
 
-h4 a,
-div#aside p span a {
-  color: #375675;
-  text-decoration: underline;
+main > article:nth-of-type(odd){
+  width: 50vw;
+  background-color: olivedrab;
+  float: right;
 }
+
+main > article:nth-of-type(even){
+  width: 50vw;
+  background-color:#EDE0D4;
+  float: left;
+}
+
 footer {
   background: #274f75 url(../images/bg-footer.gif) repeat-x;
-  min-height: 113px;
-  width: 100%;
-  padding: 37px 232px 0 232px;
-}
-/*footer div {
-  font-size: 14px;
+  min-height: 110px;
+  box-sizing: border-box;
+  position: static;
+  padding: 40px 100px 0 100px;
   margin: 0 auto;
-  padding-top: 37px;
-  position: relative;
-  width: 960px;
-}*/
-footer div#connect {
-  float: left;
-  padding: 0;
-  width: 250px;
+  display: flex;
+  justify-content: space-between;
 }
-footer div#connect a {
+footer section#footer-nav {
+  font-size: 14px;
+  flex-basis: 3;
+}
+footer section#footer-connect {
+  padding: 0;
+  flex-basis: 1;
+}
+footer section#footer-connect a {
   display: inline-block;
   padding-right: 10px;
 }
-footer div.section {
+footer section#footer-nav nav {
   float: right;
   padding: 0;
-  width: 700px;
+  
 }
-footer div.section nav ul {
+footer section#footer-nav nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
-footer div.section nav ul li {
+footer nav ul li {
   border-left: 1px solid #6886a0;
   float: left;
   padding: 0 5px;
 }
-footer div.section nav ul li.last {
+footer nav ul li.last {
   border-right: 0;
 }
-footer div.section nav ul li:first-child {
+footer nav ul li:first-child {
   border: none;
 }
 footer a {
   color: whitesmoke;
   text-decoration: none;
 }
-footer div.section nav ul li a {
+footer nav ul li a {
   display: block;
-  height: 12px;
-  line-height: 10px;
 }
 footer a:hover {
   color: red;
 }
-footer div.section p {
+footer section p {
   color: whitesmoke;
   margin: 0;
   padding: 20px 3px 0;

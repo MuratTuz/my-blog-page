@@ -1,0 +1,44 @@
+@media screen and (max-width: 480px) {
+  header {
+    margin: auto;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+   header section {
+    margin: auto ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  header section h1 {
+  font-size: 16px;
+  font-weight: 300;
+  }
+    section #name,
+    section #info {
+    color: turquoise;
+    height: 120px;
+    width: auto;
+    margin: auto ;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  img.logo-linkedin {
+    width: 35px;
+    height: 16px;
+    margin: 0;
+  }
+  img.logo-github {
+    width: 34px;
+    height: 9px;
+    margin: 0;
+  }
+  header section div h1 {
+border: 1px solid red;
+}
+  
+}/* @media screen*/
