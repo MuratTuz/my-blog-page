@@ -2,23 +2,26 @@
   header {
     margin: auto;  
     height: auto;
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 5;
   }
    header section {
     margin: auto ;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
   header section h1 {
-  font-size: 16px;
-  font-weight: 300;
+    font-size: 16px;
+    font-weight: 300;
   }
-    section #name,
-    section #info {
+  section #name,
+  section #info {
     color: turquoise;
     height: 120px;
     width: auto;
@@ -38,8 +41,72 @@
     height: 9px;
     margin: 0;
   }
-  /*header section div h1 {
-border: 1px solid red;
-}*/
-  
+  header nav {
+    margin: auto;
+  }
+  header nav ul {
+    list-style: none;
+    margin: auto;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+  }
+  .nav-menu {
+
+    position: relative;
+    margin: auto;
+    padding: 0;
+    
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+
+        display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+   
+    box-shadow:
+    0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+
+    max-height: 200px;
+    transition: max-height 0.25s ease-in;
+
+  }
+
+  .nav-item {
+      margin: auto;
+  }
+  .nav-item:hover {
+      background-color: #c80808;
+      color: white;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
 }/* @media screen*/

@@ -143,7 +143,6 @@ header nav ul li a {
 }
 header nav ul li.current,
 header nav ul li:hover {
-  height: 43px;
   background-color: #c80808;
   color: white;
 }
@@ -151,7 +150,18 @@ header nav ul li.current a,
 header nav ul li a:hover {
   color: white;
 }
-
+.hamburger {
+    display: none;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
 main > article:nth-of-type(odd){
   width: 50vw;
   background-color: olivedrab;
@@ -223,3 +233,4 @@ footer section p {
   padding: 20px 3px 0;
   text-align: right;
 }
+
