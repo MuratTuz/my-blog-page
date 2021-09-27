@@ -3,6 +3,7 @@ html, body, main{
   font-family: "Courier New", Courier, monospace;
   font-size: 1em;
   width: 100%;
+<<<<<<< HEAD
   box-sizing: border-box;
   height: 100%;
 }
@@ -13,6 +14,8 @@ html, body, main{
   content: "";
   clear: both;
   display: table; 
+=======
+>>>>>>> 943977e160aa9246d5946d27c5a6524189ae0bee
 }
 a {
   text-decoration: none;
@@ -57,9 +60,20 @@ img.logo-github {
   background-repeat: no-repeat;
   background-size: cover;
 
+<<<<<<< HEAD
   overflow-x: hidden;
   overflow-y: scroll;
 }
+=======
+/*
+.content {
+  height: 400px;
+  color: whitesmoke;
+  background-color: #284f75;
+}
+*/
+
+>>>>>>> 943977e160aa9246d5946d27c5a6524189ae0bee
 
 #info div a {
   color: rgb(91, 190, 181);

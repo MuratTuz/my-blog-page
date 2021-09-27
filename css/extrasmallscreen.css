@@ -2,25 +2,25 @@
   header section {
     padding: 0;
   }
-    main > article {
+  main > article {
     width: 100vw;
   }
-    .parallax {
+  .parallax {
     height: 30vw;
   }
 }
 
 @media screen and (max-width: 320px) {
-    body {
+  body {
     width: 320px;
   }
   footer {
     float: right;
   }
-    main > article {
+  main > article {
     width: 100vw;
   }
-    .parallax {
+  .parallax {
     height: 30vw;
   }
 }
