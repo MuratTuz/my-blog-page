@@ -1,16 +1,35 @@
-html, body, main {
-  height: 100%;
+
+html, body, main{
   font-family: "Courier New", Courier, monospace;
   font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
 }
-
+.clearfix {
+  overflow: auto;
+}
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: table; 
+}
 a {
   text-decoration: none;
   cursor: pointer;
 }
-header section div h1 {
+header section h1 {
   font-size: 68px;
   font-weight: 600;
+  color: turquoise;
+  text-align: center;
+}
+header section info {
+  color: turquoise;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 img {
   border: none;
@@ -37,29 +56,14 @@ img.logo-github {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
 
-/*
-.content {
-  height: 400px;
-  color: whitesmoke;
-  background-color: #284f75;
-}
-*/
-section #name,
-section #info {
-  color: turquoise;
-  height: 120px;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 #info div a {
   color: rgb(91, 190, 181);
-  /*color: #acbcc9;*/
-  font-size: medium;
+  font-size: 16px;
 }
 #infologos {
   display: flex;
@@ -77,8 +81,6 @@ section #info {
   outline: solid #f00 1px !important;
 }
 */
-/*header divsection:after,
-header nav ul:after,*/
 footer:after,
 footer nav ul:after {
   clear: both;
@@ -89,20 +91,17 @@ footer nav ul:after {
   visibility: hidden;
 }
 
-/*header div#navigation {
-  margin: 0;
-}*/
-
 header {
   background-color: #284f75;
-  height: 200px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* Stay fixed on top*/
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
+  z-index:9;
 }
 
 header nav {
@@ -112,20 +111,23 @@ header nav {
 }
 
 header section {
-  height: 145px;
-  margin: 0 200px;
+  min-height: 165px;
+  margin: 0;
+  padding: 10px 25px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 header nav ul {
   list-style: none;
-  margin: 0 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
 }
 header nav ul li {
-  float: left;
   padding-right: 5px;
 }
 header nav ul li a {
@@ -162,30 +164,38 @@ header nav ul li a:hover {
     transition: all 0.3s ease-in-out;
     background-color: #101010;
 }
-main > article:nth-of-type(odd){
+
+main > article {
   width: 50vw;
+  box-sizing: border-box;
+  position: relative;
+}
+main > article:nth-of-type(odd){
   background-color: olivedrab;
   float: right;
 }
 
 main > article:nth-of-type(even){
-  width: 50vw;
   background-color:#EDE0D4;
   float: left;
 }
+
 
 footer {
   background: #274f75 url(../images/bg-footer.gif) repeat-x;
   min-height: 110px;
   box-sizing: border-box;
-  position: static;
   padding: 40px 100px 0 100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  position:fixed ;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 footer section#footer-nav {
-  font-size: 14px;
+  font-size: 16px;
   flex-basis: 3;
 }
 footer section#footer-connect {
