@@ -1,0 +1,26 @@
+@media screen and (max-width: 400px) {
+  header section {
+    padding: 0;
+  }
+    main > article {
+    width: 100vw;
+  }
+    .parallax {
+    height: 30vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+    width: 320px;
+  }
+  footer {
+    float: right;
+  }
+    main > article {
+    width: 100vw;
+  }
+    .parallax {
+    height: 30vw;
+  }
+}
