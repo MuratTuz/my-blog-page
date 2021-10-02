@@ -1,35 +1,72 @@
-
-html, body{
+html {
   font-family: "Courier New", Courier, monospace;
   font-size: 1em;
-  width: 100%;
   box-sizing: border-box;
   height: 100%;
+  scroll-behavior: smooth;
 }
-.clearfix {
-  overflow: auto;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
-.clearfix::after{
-  content: "";
-  clear: both;
-  display: table; 
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
 }
-a {
-  text-decoration: none;
-  cursor: pointer;
+
+header {
+  background-color: #284f75;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Stay fixed on top*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
 }
+
+header section {
+  min-height: 165px;
+  margin: 0;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 header section h1 {
   font-size: 68px;
   font-weight: 600;
   color: turquoise;
   text-align: center;
 }
-header section info {
+header section .info {
   color: turquoise;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+#info div a {
+  color: rgb(91, 190, 181);
+  font-size: 16px;
+}
+#infologos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+.seperator {
+  height: 45px;
 }
 img {
   border: none;
@@ -44,87 +81,11 @@ img.logo-github {
   height: 17px;
   margin: 0;
 }
-.parallax {
-  /* The image used */
-  background-image: url("../images/it_background.jpeg");
-
-  /* height */
-  height: 70%;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-header, footer, main{
-  position: absolute;
-}
-
-main{
-  width: 100%;
-  box-sizing: border-box;
-  height: 100%;
- 
-}
-
-#info div a {
-  color: rgb(91, 190, 181);
-  font-size: 16px;
-}
-#infologos {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 10px;
-}
-.seperator {
-  height: 45px;
-}
-/*
-* {
-  background: #000 !important;
-  color: #0f0 !important;
-  outline: solid #f00 1px !important;
-}
-*/
-footer:after,
-footer nav ul:after {
-  clear: both;
-  content: " ";
-  display: block;
-  font-size: 0;
-  height: 0;
-  visibility: hidden;
-}
-
-header {
-  background-color: #284f75;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* Stay fixed on top*/
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index:9;
-}
 
 header nav {
   margin: 0 auto;
   width: 100%;
   background: #274f75 url(../images/bg-menu.gif) repeat-x;
-}
-
-header section {
-  min-height: 165px;
-  margin: 0;
-  padding: 10px 25px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 header nav ul {
@@ -133,7 +94,6 @@ header nav ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
 header nav ul li {
   padding-right: 5px;
@@ -141,13 +101,12 @@ header nav ul li {
 header nav ul li a {
   color: black;
   display: block;
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: 550;
   height: 43px;
   line-height: 37px;
   padding: 0 23px;
   text-align: center;
-  text-decoration: none;
   text-shadow: 1px 1px 0 turquoise;
   text-transform: capitalize;
 }
@@ -161,95 +120,117 @@ header nav ul li a:hover {
   color: white;
 }
 .hamburger {
-    display: none;
+  display: none;
 }
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+/* Main component */
+main {
+  flex: 1;
+  min-height: 100%;
+}
 main > article {
   width: 50vw;
-  box-sizing: border-box;
   position: relative;
+  margin: 0 1em;
+  padding: 1em;
 }
-main > article:nth-of-type(odd){
+main > article:nth-of-type(odd) {
   background-color: olivedrab;
   float: right;
 }
 
-main > article:nth-of-type(even){
-  background-color:#EDE0D4;
+main > article:nth-of-type(even) {
+  background-color: #ede0d4;
   float: left;
 }
 
+.parallax {
+  background-image: url("../images/it_background.jpeg");
+  min-height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Footer component */
 
 footer {
   background: #274f75 url(../images/bg-footer.gif) repeat-x;
   min-height: 110px;
   box-sizing: border-box;
-  padding: 40px 100px 0 100px;
+  padding: 40px 100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  
+  color: whitesmoke;
+  font-size: 1.1em;
 }
-footer section#footer-nav {
-  font-size: 16px;
-  flex-basis: 3;
-}
-footer section#footer-connect {
-  padding: 0;
-  flex-basis: 1;
-}
+
 footer section#footer-connect a {
   display: inline-block;
   padding-right: 10px;
 }
-footer section#footer-nav nav {
-  float: right;
-  padding: 0;
-  
+footer nav,
+footer article {
+  padding: 0.3em;
+  min-width: 80%;
 }
-footer section#footer-nav nav ul {
+footer ul {
   list-style: none;
+  display: flex;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
-footer nav ul li {
+
+footer li {
+  padding: 0 1em;
+  white-space: nowrap;
+}
+
+footer nav ul li:not(:last-child) {
+  border-right: 1px solid #6886a0;
+}
+footer article ul li:last-child {
   border-left: 1px solid #6886a0;
-  float: left;
-  padding: 0 5px;
 }
-footer nav ul li.last {
-  border-right: 0;
-}
-footer nav ul li:first-child {
-  border: none;
-}
-footer a {
-  color: whitesmoke;
-  text-decoration: none;
-}
-footer nav ul li a {
-  display: block;
-}
+
 footer a:hover {
   color: red;
 }
-footer section p {
-  color: whitesmoke;
-  margin: 0;
-  padding: 20px 3px 0;
-  text-align: right;
+
+footer #footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
+@media (min-width: 601px) and (max-width: 1050px) {
+  footer {
+    padding: 40px;
+  }
+}
+
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */

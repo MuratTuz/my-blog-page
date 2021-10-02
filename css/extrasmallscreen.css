@@ -1,26 +1,142 @@
 @media screen and (max-width: 400px) {
-  header section {
+  body {
+    margin: 0;
     padding: 0;
   }
-  main > article {
-    width: 100vw;
+  header {
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 5;
   }
-  .parallax {
-    height: 30vw;
+  header section {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
-}
+  header section h1 {
+    font-size: 54px;
+    margin: 0;
+    padding: 0;
+  }
+  header section .info {
+    color: turquoise;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  img.logo-linkedin {
+    margin: 0;
+  }
+  img.logo-github {
+    margin: 0;
+    padding: 0;
+  }
 
-@media screen and (max-width: 320px) {
-  body {
-    width: 320px;
+  header nav {
+    margin: 0;
+  }
+  header nav ul {
+    list-style: none;
+    margin: auto;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+  }
+  .nav-menu {
+    position: relative;
+    margin: auto;
+    padding: 0;
+
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    max-height: 200px;
+    transition: max-height 0.25s ease-in;
+  }
+
+  .nav-item {
+    margin: auto;
+  }
+  .nav-item:hover {
+    background-color: #c80808;
+    color: white;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .parallax:nth-of-type(1) {
+    min-height: 30vw;
+  }
+
+  main > article {
+    width: 100%;
+    float: none !important;
+    margin: 0 auto;
+  }
+
+  footer {
+    padding: 20px 10px;
+    margin: 0;
+  }
+
+  footer article ul,
+  footer #footer-connect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer article ul li:last-child {
+    border: none;
   }
   footer {
-    float: right;
+    padding: 20px 0;
   }
-  main > article {
-    width: 100vw;
+  footer li {
+    padding: 0;
+    white-space: normal;
   }
-  .parallax {
-    height: 30vw;
+  footer nav li {
+    padding: 0 0.3em;
   }
 }

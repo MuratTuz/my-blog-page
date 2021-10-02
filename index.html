@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/smallscreen.css">
+  <link rel="stylesheet" media="(min-width: 401px) and (max-width: 600px)" href="css/smallscreen.css">
   <link rel="stylesheet" media="screen and (max-width: 400px)" href="css/extrasmallscreen.css">
 </head>
 
@@ -37,39 +37,50 @@
         <span class="bar"></span>
       </div>
       <ul class="nav-menu">
-        <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item"><a href="#">Blog</a></li>
-        <li class="nav-item"><a href="#">Powercoders</a></li>
-        <li class="nav-item"><a href="#">Contact Me</a></li>
+        <li class="nav-item"><a href="#article1">Home</a></li>
+        <li class="nav-item"><a href="#article2">Blog</a></li>
+        <li class="nav-item"><a href="#article3">Contact Me</a></li>
       </ul>
 
     </nav>
   </header>
 
-
   <main>
     <div class="parallax"></div>
 
-    <article>
+    <article id="article1">
       <section>
-        <p>
-          The beginning of the parallax scrolling effect.
-          This div is just here to enable scrolling.
-          Scroll Up and Down this page to see the parallax scrolling effect.
-          Scroll Up and Down this page to see the parallax scrolling effect.
-          Scroll Up and Down this page to see the parallax scrolling effect.
-          Scroll Up and Down this page to see the parallax scrolling effect.
-          End of the main > article > section
-        </p>
+The beginning of the parallax scrolling effect.
+This div is just here to enable scrolling.
+Scroll Up and Down this page to see the parallax scrolling effect.
+Scroll Up and Down this page to see the parallax scrolling effect.
+Scroll Up and Down this page to see the parallax scrolling effect.
+Scroll Up and Down this page to see the parallax scrolling effect.
+End of the main > article > section
+
       </section>
     </article>
 
     <div class="parallax"></div>
 
 
-    <article>
+    <article id="article2">
       <section>
-        </p>
+The beginning of the parallax scrolling effect.
+This div is just here to enable scrolling.
+Scroll Up and Down this page to see the parallax scrolling effect.
+Scroll Up and Down this page to see the parallax scrolling effect.
+Scroll Up and Down this page to see the parallax scrolling effect.
+Scroll Up and Down this page to see the parallax scrolling effect.
+End of the main > article > section
+
+</section>
+</article>
+<div class="parallax"></div>
+
+<article id="article3">
+  <section>
+
         The beginning of the parallax scrolling effect.
         This div is just here to enable scrolling.
         Scroll Up and Down this page to see the parallax scrolling effect.
@@ -77,27 +88,33 @@
         Scroll Up and Down this page to see the parallax scrolling effect.
         Scroll Up and Down this page to see the parallax scrolling effect.
         End of the main > article > section
-        </p>
+
       </section>
     </article>
     <div class="parallax"></div>
   </main>
-  
+
   <footer>
-    <section id="footer-connect"> <a href="#"><img src="images/icon-facebook.gif" alt="facebook" /> </a>
+    <section id="footer-connect">
+      <a href="#"><img src="images/icon-facebook.gif" alt="facebook" /></a>
       <a href="#"><img src="images/icon-twitter.gif" alt="twitter" /></a>
       <a href="#"><img src="images/icon-youtube.gif" alt="youtube" /></a>
     </section>
     <section id="footer-nav">
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Powercoders</a></li>
-          <li class="last"><a href="#">Contact Me</a></li>
+          <li><a href="#article1">Home</a></li>
+          <li><a href="#article2">Blog</a></li>
+          <li><a href="#article3">Contact Me</a></li>
         </ul>
       </nav>
-      <p>Copyright &copy; - All Rights Reserved | Desing By Murat TUZLALI</p>
+      <article>
+        <ul>
+          <li>Copyright &copy;</li>
+          <li>All Rights Reserved</li>
+          <li>Desing By Murat TUZLALI</li>
+        </ul>
+      </article>
     </section>
   </footer>
 
