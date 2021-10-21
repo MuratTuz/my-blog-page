@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   min-width: 100%;
 }
-
+/* --------- Header --------- */
 header {
   background-color: #284f75;
   min-height: 200px;
@@ -31,7 +31,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9;
+  z-index: 100;
 }
 
 header section {
@@ -138,42 +138,87 @@ a {
   color: whitesmoke;
 }
 
-/* Main component */
+/* ----------- Main -------------- */
 main {
   flex: 1;
-  min-height: 100%;
-}
-main > article {
-  width: 50vw;
-  position: relative;
-  margin: 0 1em;
-  padding: 1em;
-}
-main > article:nth-of-type(odd) {
-  background-color: olivedrab;
-  float: right;
-}
-
-main > article:nth-of-type(even) {
-  background-color: #ede0d4;
-  float: left;
-}
-
-.parallax {
+  /* min-height: 100%; */
+  height: 100vh;
   background-image: url("../images/it_background.jpeg");
-  min-height: 70vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* position: relative; */
+  margin-top:250px;
 }
-/* Footer component */
+main > article {
+  width: 80vw;
+  position: relative;
+  margin: 10em 1em;
+  padding: 2em;
+  border-radius: 1%;
+}
+main > article:nth-of-type(odd) {
+  background-color: whitesmoke;
+  /* background-color: #52b5c7; */
+  float: right;
+}
+
+main > article:nth-of-type(even) {
+  background-color: #274f75;
+  color: whitesmoke;
+  float: left;
+}
+#article1 {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.2em;
+  flex-wrap: wrap;
+}
+article .card {
+  width: 15em;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+article .description {
+  width: 30em;
+  text-align: justify;
+}
+article .description ul {
+  list-style: none;
+  margin: 0.3em auto 1em;
+  padding-left: 0;
+}
+
+article .description h4 {
+  margin:0;
+}
+article .description li {
+  padding-left: 1em;
+}
+
+article .description li:before {
+  content: "-";
+  padding-right: 0.5em;
+}
+
+main article section {
+  padding: 1rem;
+}
+main article section img{
+  width: 200px;
+ object-fit: cover;
+}
+
+/* ----------- Footer -------------- */
 
 footer {
   background: #274f75 url(../images/bg-footer.gif) repeat-x;
   min-height: 110px;
   box-sizing: border-box;
-  padding: 40px 100px;
+  padding: 40px 55px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -195,6 +240,7 @@ footer ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -223,11 +269,12 @@ footer #footer-nav {
   justify-content: flex-start;
 }
 
-@media (min-width: 601px) and (max-width: 1050px) {
-  footer {
-    padding: 40px;
-  }
+footer #footer-connect {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
 
 /* * {
   background: #000 !important;
