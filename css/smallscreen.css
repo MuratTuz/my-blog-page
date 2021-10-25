@@ -1,4 +1,6 @@
-
+html{
+  scroll-padding-top: 0;
+}
   body {
     margin: 0;
     padding: 0;
@@ -103,9 +105,6 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .parallax {
-    min-height: 30vw;
-  }
   main{
     margin-top: 0px;
   }
@@ -118,7 +117,7 @@
   article .description {
   text-align: left;
   }
-  
+
   footer {
     padding: 20px 10px;
     margin: 0;
