@@ -14,7 +14,7 @@
 <body>
   <header>
     <section>
-      <h1>MURAT TUZLALI</h1>
+      <h1 class="anime-h1">MURAT TUZLALI</h1>
       <div id="info">
         <div>
           <a href="mailto:murat.tuzlali@powercoders.org">
@@ -38,6 +38,7 @@
       </div>
       <ul class="nav-menu">
         <li class="nav-item"><a href="#Home">Home</a></li>
+        <li class="nav-item"><a href="https://powercoders.org/">PowerCoders</a></li>
         <li class="nav-item"><a href="#Blog">Blog</a></li>
         <li class="nav-item"><a href="#Contact">Contact Me</a></li>
       </ul>
@@ -107,7 +108,7 @@
         </div>
       </section>
       <section class="description">
-        <img id="callbackpic" src="./images/callback-function.svg" alt="callback">
+        <h3><b>What is callback ?</b></h3>
         <p>
           In JavaScript, a <b>callback</b> is a function passed into another function as an argument to be executed later.
         </p>
@@ -145,38 +146,62 @@
       </section>
     </article>
     <article id="Contact">
-      <section>
-    <h1>Contact Me</h1>
+      <section class="card">
+        <div class="contact">
+          <h1 class="envh1">Contact Me</h1>
+          <div class="envelope">
+            <div class="top">
+              <div class="outer">
+                <div class="inner"></div>
+              </div>
+            </div>
+            <div class="bottom"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="cover"></div>
+            <div class="paper">
+              <span class="call">
+                &#128526;Your name
+              </span>
+              <span class="mail">
+                &#128231;Your email
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="description">
+        <form class="form-container">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname">
     
-    <form class="form-container">
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname">
     
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname">
-    
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email">
-
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject"></textarea>
-      <button id="send-letter">Send</button>
-      </form>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject"></textarea>
+          <button id="send-letter">Send</button>
+          </form>
       </section>
     </article>
   </main>
 
   <footer>
     <section id="footer-connect">
-      <a href="#"><img src="images/icon-facebook.gif" alt="facebook" /></a>
-      <a href="#"><img src="images/icon-twitter.gif" alt="twitter" /></a>
-      <a href="#"><img src="images/icon-youtube.gif" alt="youtube" /></a>
+      <a href="https://www.facebook.com/PowercodersHQ/"><img src="images/icon-facebook.gif" alt="facebook" /></a>
+      <a href="https://twitter.com/PowerCodersHQ"><img src="images/icon-twitter.gif" alt="twitter" /></a>
+      <a href="https://www.youtube.com/channel/UCujeOS7Q1uKJb1IxAcF8wUA"><img src="images/icon-youtube.gif"
+          alt="youtube" /></a>
     </section>
     
     <section id="footer-nav">
       <nav>
         <ul>
           <li><a href="#Home">Home</a></li>
+          <li><a href="https://powercoders.org/">PowerCoders</a></li>
           <li><a href="#Blog">Blog</a></li>
           <li><a href="#Contact">Contact Me</a></li>
         </ul>
@@ -191,6 +216,7 @@
     </section>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

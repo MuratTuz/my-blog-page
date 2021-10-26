@@ -114,6 +114,11 @@ html{
     border-radius: 0;
   }
 
+  .description img, .card img{
+  min-width: 80vw;
+}
+
+
   article .description {
   text-align: left;
   }
